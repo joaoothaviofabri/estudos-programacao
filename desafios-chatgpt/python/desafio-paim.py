@@ -18,7 +18,7 @@ cadastro_nome = str(input("Digite seu nome: "))
 cadastro_senha = str(input("Crie sua senha: "))
 login_usuario = (cadastro_nome, cadastro_senha)
 
-for tentativa in range(4):
+for tentativa in range(5):
       tentativa_nome = str(input("Digite o nome de usuário: "))
       tentativa_senha = str(input("Digite sua senha: "))
 
