@@ -3,7 +3,7 @@ from datetime import datetime
 def validar_login(tentativa, login):
       return tentativa == login
 
-def registro_txt(login_nome, login_senha,):
+def registro_txt(login_nome, login_senha):
       registro_horario = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
       
       with open('registro_login.txt', 'a', encoding='utf-8') as f:
