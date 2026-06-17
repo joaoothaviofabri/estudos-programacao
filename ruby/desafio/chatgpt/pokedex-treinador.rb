@@ -34,9 +34,10 @@ loop do
             puts "A sua equipe está vazia!"
         else
             for valor in pokemon_armazenados do
-                if valor[:nivel_pokemon] <= 20
+                case valor[:nivel_pokemon]
+                when 1..20
                     classificacao_nivel = "Iniciante"
-                elsif valor[:nivel_pokemon] >= 21 && valor[:nivel_pokemon] <= 50
+                when 21..50
                     classificacao_nivel = "Experiente"
                 else
                     classificacao_nivel = "Elite"
@@ -80,10 +81,10 @@ loop do
             media_nivel = soma_nivel / quantidade_pokemon
             puts "Média dos níveis: #{media_nivel}"
 
-            pokemon_mais_forte = pokemon_armazenados[0[2]]
+            pokemon_mais_forte = pokemon_armazenados[0]
             for valor in pokemon_armazenados do
                 if pokemon_mais_forte[:nivel_pokemon] < valor[:nivel_pokemon]
-                    pokemon_mais_forte = valor[:nome_pokemon, :nivel_pokemon]
+                    pokemon_mais_forte = valor
                 end
             end
             puts "Pokémon mais forte:"
